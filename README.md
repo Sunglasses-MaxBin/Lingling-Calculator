@@ -1,4 +1,12 @@
 # Lingling‑Calculator
+
+
+[![Release](https://img.shields.io/github/v/release/Sunglasses-MaxBin/Lingling-Calculator?style=flat-square)](https://github.com/Sunglasses-MaxBin/Lingling-Calculator/releases)
+[![Stars](https://img.shields.io/github/stars/Sunglasses-MaxBin/Lingling-Calculator?style=flat-square)](https://github.com/Sunglasses-MaxBin/Lingling-Calculator/stargazers)
+[![Forks](https://img.shields.io/github/forks/Sunglasses-MaxBin/Lingling-Calculator?style=flat-square)](https://github.com/Sunglasses-MaxBin/Lingling-Calculator/network/members)
+[![Issues](https://img.shields.io/github/issues/Sunglasses-MaxBin/Lingling-Calculator?style=flat-square)](https://github.com/Sunglasses-MaxBin/Lingling-Calculator/issues)
+
+
  Lingling‑Calculator 是一款采用 **Material Design 3** 设计的开源安卓计算器，使用 Kotlin + Jetpack Compose 开发，追求简洁现代界面，体积轻巧，无多余权限。
  ---
  ## 技术细节
