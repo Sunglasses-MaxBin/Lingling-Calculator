@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.LinglingCalculator" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/dark_purple_500</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+</resources>
