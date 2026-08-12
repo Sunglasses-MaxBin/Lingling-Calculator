@@ -33,7 +33,7 @@
  2. 在安卓设备安装 APK
  3. 直接打开即可使用计算器
 ## 特别鸣谢
-特别鸣谢GitHub用户@Creepy_Nightmares指出其源代码缺失
+特别鸣谢GitHub用户@Creepy_Nightmares指出其源代码缺失的问题
 
  ## 编译构建
 
