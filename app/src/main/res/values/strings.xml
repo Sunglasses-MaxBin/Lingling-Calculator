@@ -22,5 +22,17 @@
     <string name="num7">7</string>
     <string name="num8">8</string>
     <string name="num9">9</string>
-</resources>
-
+    <string name="abc1">检查更新</string>
+    <string name="abc2">取消</string>
+    <string name="abc3">确定</string>
+    <string name="cnm1">GitHub头像</string>
+    <string name="cnm2">Lingling Calculator</string>
+    <string name="cnm3">by Sunglasses-MaxBin</string>
+    <string name="cnm4">GitHub仓库</string>
+    <string name="cnm5">关闭</string>
+    <string name="qwe1">(</string>
+    <string name="qwe2">)</string>
+    <string name="qwe3">%</string>
+    <string name="qwe4">^</string>
+    <string name="ver">1.7.0</string>
+</resources>        
