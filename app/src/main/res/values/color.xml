@@ -4,4 +4,10 @@
     <color name="on_primary">#FFFFFFFF</color>
     <color name="ic_launcher_background">#3DDC84</color>
     <color name="purple_500">#6750A4</color>
+    <color name="dark_purple_500">#9A82DB</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_white">#FFEAEAEA</color>
+    <color name="black">#FF000000</color>
+    <color name="dark_primary">#FF42A5F5</color>
+    <color name="zxc">#6750A4</color>
 </resources>
