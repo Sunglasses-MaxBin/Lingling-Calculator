@@ -35,4 +35,23 @@
     <string name="qwe3">%</string>
     <string name="qwe4">^</string>
     <string name="ver">1.7.0</string>
-</resources>        
+    <string name="interface_settings">界面设置</string>
+    <string name="save_and_restart">保存并重启软件</string>
+    <string name="reset_default">恢复默认</string>
+    <string name="view_preview">查看预览</string>
+    <string name="scale_label">界面大小（倍数）</string>
+    <string name="density_label">设置Density (默认 160)</string>
+    <string name="settings">设置</string>
+    <string name="back">返回</string>
+    <string name="Appearance_settings">外观设置</string>
+    <string name="About">关于本应用</string>      
+    <string name="asd1">调整深色/浅色主题</string> 
+    <string name="asd2">调整界面大小和显示密度</string>
+    <string name="asd3">开发者信息和GitHub链接</string>
+    <string name="asd4">160</string>
+    <string name="asd5">修改后需重启应用才能生效</string>
+    <string name="asd6">例如 1.8</string>
+    <string name="asd7">1.0</string>
+</resources>
+
+</LinearLayout>
