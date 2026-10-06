@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sunglasses.linglingcalculator">
 
-    <!-- 网络权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -14,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LingLingCalculator">
 
-        <!-- 主界面 -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -24,11 +21,26 @@
             </intent-filter>
         </activity>
 
-        <!-- 设置界面 -->
         <activity
             android:name=".SettingsActivity"
             android:label="设置"
             android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".InterfaceSettingsActivity"
+            android:label="界面设置"
+            android:parentActivityName=".SettingsActivity" />
+
+        <!-- 新增：关于本应用 -->
+        <activity
+            android:name=".AboutActivity"
+            android:label="关于本应用"
+            android:parentActivityName=".SettingsActivity" />
+
+        <activity
+            android:name=".PreviewActivity"
+            android:label="预览"
+            android:parentActivityName=".InterfaceSettingsActivity" />
 
     </application>
 
