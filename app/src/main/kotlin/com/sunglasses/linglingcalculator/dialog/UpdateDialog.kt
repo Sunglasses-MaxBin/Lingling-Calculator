@@ -3,7 +3,9 @@ package com.sunglasses.linglingcalculator.dialog
 import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -22,6 +24,18 @@ class UpdateDialog(context: Context) : Dialog(context) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dialog_update)
 
+        // 1. 设置窗口背景透明（去掉外面那层难看的白框）
+        window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        // 2. 核心修复：动态适配屏幕宽度
+        window?.let { window ->
+            val displayMetrics = context.resources.displayMetrics
+            val screenWidth = displayMetrics.widthPixels
+            // 弹窗宽度设为屏幕宽度的 85%，并保持高度自适应
+            window.setLayout((screenWidth * 0.85).toInt(), WindowManager.LayoutParams.WRAP_CONTENT)
+            window.setGravity(Gravity.CENTER)
+        }
+
         progressBar = findViewById<ProgressBar>(R.id.progressBar)
         tvTitle = findViewById<TextView>(R.id.tvTitle)
         tvMessage = findViewById<TextView>(R.id.tvMessage)
@@ -31,9 +45,15 @@ class UpdateDialog(context: Context) : Dialog(context) {
         btnCancel.setOnClickListener { dismiss() }
         setCancelable(false)
         setCanceledOnTouchOutside(false)
+
+        // 初始化时直接显示加载中状态
+        progressBar.visibility = View.VISIBLE
+        tvMessage.text = "正在检查更新..."
+        btnAction.visibility = View.GONE
     }
 
-    fun setLoading(message: String = "正在檢查更新...") {
+    // 后面的 setLoading、showUpdateAvailable 等方法保持不变...
+    fun setLoading(message: String = "正在检查更新...") {
         progressBar.visibility = View.VISIBLE
         tvMessage.text = message
         btnAction.visibility = View.GONE
@@ -41,12 +61,12 @@ class UpdateDialog(context: Context) : Dialog(context) {
 
     fun showUpdateAvailable(updateInfo: UpdateInfo, onUpdateClick: () -> Unit) {
         progressBar.visibility = View.GONE
-        tvTitle.text = "發現新版本！"
+        tvTitle.text = "发现新版本！"
         tvMessage.text = """
-            當前版本：${updateInfo.currentVersion}
+            当前版本：${updateInfo.currentVersion}
             最新版本：${updateInfo.latestVersion}
             
-            建議更新到最新版本以獲得更好的體驗。
+            建议更新到最新版本以获得更好的体验。
         """.trimIndent()
         btnAction.text = "前往更新"
         btnAction.visibility = View.VISIBLE
@@ -57,9 +77,9 @@ class UpdateDialog(context: Context) : Dialog(context) {
         progressBar.visibility = View.GONE
         tvTitle.text = "已是最新版本"
         tvMessage.text = """
-            當前版本：${updateInfo.currentVersion}
+            当前版本：${updateInfo.currentVersion}
             
-            您正在使用最新版本，無需更新。
+            您正在使用最新版本，无需更新。
         """.trimIndent()
         btnAction.text = "前往GitHub"
         btnAction.visibility = View.VISIBLE
@@ -68,9 +88,9 @@ class UpdateDialog(context: Context) : Dialog(context) {
 
     fun showError(message: String) {
         progressBar.visibility = View.GONE
-        tvTitle.text = "檢查失敗"
+        tvTitle.text = "检查失败"
         tvMessage.text = message
-        btnAction.text = "關閉"
+        btnAction.text = "关闭"
         btnAction.visibility = View.VISIBLE
         btnAction.setOnClickListener { dismiss() }
     }
