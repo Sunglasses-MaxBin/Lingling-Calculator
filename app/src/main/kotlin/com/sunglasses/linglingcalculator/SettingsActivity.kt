@@ -9,7 +9,6 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.sunglasses.linglingcalculator.adapter.SettingsAdapter
-import com.sunglasses.linglingcalculator.dialog.AboutDialog
 import com.sunglasses.linglingcalculator.dialog.ThemeDialog
 import com.sunglasses.linglingcalculator.dialog.UpdateDialog
 import com.sunglasses.linglingcalculator.utils.SettingsManager
